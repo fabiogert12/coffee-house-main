@@ -303,3 +303,37 @@ footer p {
         font-size: 28px;
     }
 }
+
+/* =================================
+   MODO ESCURO - CARDÁPIO
+================================= */
+
+body.dark-mode {
+    background-color: #1a1410;
+    color: #f7f1e8;
+}
+
+body.dark-mode section {
+    background-color: #241a14;
+    color: #f7f1e8;
+}
+
+body.dark-mode .produto {
+    background-color: #302219;
+    color: #f7f1e8;
+}
+
+body.dark-mode p {
+    color: #cbb9a7;
+}
+
+/* Botão de tema */
+#themeToggle {
+    background-color: #c69b6d;
+    color: #211711;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
