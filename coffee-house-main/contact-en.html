@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Coffee House</title>
+
+    <link rel="stylesheet" href="style-contact.css">
+    <script src="script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">Coffee House.</div>
+
+        <nav>
+            <a href="index-en.html">Home</a>
+            <a href="about-en.html">About Us</a>
+            <a href="menu-en.html">Menu</a>
+            <a href="contact-en.html" class="ativo">Contact</a>
+        </nav>
+
+    </header>
+
+    <!-- BANNER -->
+
+    <section class="contato-banner">
+
+        <span>We're here for you</span>
+
+        <h1>Let's Talk!</h1>
+
+        <p>
+            Questions, suggestions, or simply a desire to talk about coffee?
+            We'd love to hear from you.
+        </p>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contato-container">
+
+        <div class="contato-informacoes">
+
+            <span class="etiqueta">Get in Touch</span>
+
+            <h2>We'd love to hear from you.</h2>
+
+            <p>
+                Our goal is to provide special experiences.
+                Get in touch and talk to our team.
+            </p>
+
+            <div class="informacao">
+
+                <h3>📍 Address</h3>
+                <p>123 Flowers Street - Downtown</p>
+
+            </div>
+
+            <div class="informacao">
+
+                <h3>✉️ Email</h3>
+                <p>contact@coffeehouse.com</p>
+
+            </div>
+
+            <div class="informacao">
+
+                <h3>📞 Phone</h3>
+                <p>+55 (11) 99999-9999</p>
+
+            </div>
+
+            <div class="informacao">
+
+                <h3>🕒 Opening Hours</h3>
+                <p>Monday to Saturday: 8 AM to 8 PM</p>
+
+            </div>
+
+        </div>
+
+        <!-- CONTACT FORM -->
+
+        <div class="formulario">
+
+            <h2>Send Us a Message</h2>
+
+            <form id="formContato">
+
+                <label for="nome">Your Name</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="email">Your Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="assunto">Subject</label>
+
+                <select id="assunto" name="assunto" required>
+
+                    <option value="" disabled selected>
+                        Select a subject
+                    </option>
+
+                    <option value="menu">
+                        Menu Inquiries
+                    </option>
+
+                    <option value="orders">
+                        Orders
+                    </option>
+
+                    <option value="suggestions">
+                        Suggestions
+                    </option>
+
+                    <option value="events">
+                        Reservations and Events
+                    </option>
+
+                    <option value="other">
+                        Other
+                    </option>
+
+                </select>
+
+                <label for="mensagem">Your Message</label>
+
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    rows="5"
+                    placeholder="Write your message..."
+                    required
+                ></textarea>
+
+                <button type="submit">Send Message</button>
+
+                <p id="resposta"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- FINAL QUOTE -->
+
+    <section class="frase-contato">
+
+        <h2>
+            "A good coffee brings people together.
+            A good conversation creates memories."
+        </h2>
+
+        <span>Coffee House.</span>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <strong>Coffee House.</strong>
+
+        <p>Coffee, quality and good moments.</p>
+
+        <p>© 2026 Coffee House. All rights reserved.</p>
+
+    </footer>
+
+</body>
+</html>

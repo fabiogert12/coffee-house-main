@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coffee House | Your Special Moment</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f7f1e8;
+            color: #211711;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* HEADER */
+
+        header {
+            background-color: #211711;
+            color: #f7f1e8;
+            padding: 22px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 27px;
+            font-weight: 700;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #c69b6d;
+        }
+
+        /* LANGUAGE SELECTOR */
+
+        .idiomas {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 7px 12px;
+            background-color: #302219;
+            border: 1px solid #57402e;
+            border-radius: 30px;
+        }
+
+        .idiomas a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 26px;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .idiomas img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .idiomas a:hover {
+            transform: scale(1.12);
+            box-shadow: 0 0 8px #c69b6d;
+        }
+
+        /* HOME */
+
+        .inicio {
+            min-height: 580px;
+            background:
+                linear-gradient(
+                    rgba(20, 12, 8, 0.55),
+                    rgba(20, 12, 8, 0.55)
+                ),
+                url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1800&q=85");
+
+            background-position: center;
+            background-size: cover;
+
+            display: flex;
+            align-items: center;
+            padding: 70px 10%;
+            color: white;
+        }
+
+        .inicio-conteudo {
+            max-width: 600px;
+        }
+
+        .inicio h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 58px;
+            line-height: 1.15;
+            margin-bottom: 22px;
+        }
+
+        .inicio p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .botao {
+            display: inline-block;
+            background-color: #c69b6d;
+            color: #211711;
+            padding: 14px 28px;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #e0bd94;
+            transform: translateY(-3px);
+        }
+
+        /* DIFFERENTIALS */
+
+        .diferenciais {
+            padding: 75px 8%;
+            text-align: center;
+        }
+
+        .titulo {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .subtitulo {
+            color: #74685e;
+            margin-bottom: 45px;
+        }
+
+        .diferenciais-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .diferencial {
+            background-color: #fffaf3;
+            padding: 35px 25px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .diferencial:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(33, 23, 17, 0.10);
+        }
+
+        .diferencial h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin: 15px 0;
+        }
+
+        .diferencial p {
+            color: #74685e;
+            line-height: 1.7;
+        }
+
+        .icone {
+            font-size: 35px;
+        }
+
+        /* ABOUT */
+
+        .sobre {
+            background-color: #e9ddce;
+            padding: 85px 10%;
+            display: flex;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .sobre img {
+            width: 50%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .sobre-conteudo {
+            flex: 1;
+        }
+
+        .sobre-conteudo p {
+            color: #62564c;
+            line-height: 1.9;
+            margin: 20px 0 28px;
+        }
+
+        /* MENU */
+
+        .cardapio {
+            padding: 85px 8%;
+            text-align: center;
+        }
+
+        .produtos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .produto {
+            background-color: #fffaf3;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .produto:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(33, 23, 17, 0.10);
+        }
+
+        .produto img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .produto-info {
+            padding: 22px;
+        }
+
+        .produto h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .produto p {
+            color: #74685e;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .preco {
+            color: #966b43;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        /* FINAL SECTION */
+
+        .chamada {
+            background-color: #211711;
+            color: #f7f1e8;
+            text-align: center;
+            padding: 75px 20px;
+        }
+
+        .chamada p {
+            color: #d4c4b3;
+            margin: 15px 0 25px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: #160f0b;
+            color: #cbb9a7;
+            text-align: center;
+            padding: 25px;
+            font-size: 13px;
+        }
+
+        /* RESPONSIVENESS */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 18px;
+            }
+
+            .inicio {
+                min-height: 500px;
+                padding: 55px 8%;
+            }
+
+            .inicio h1 {
+                font-size: 40px;
+            }
+
+            .diferenciais-container,
+            .produtos {
+                grid-template-columns: 1fr;
+            }
+
+            .sobre {
+                flex-direction: column;
+                padding: 60px 8%;
+            }
+
+            .sobre img {
+                width: 100%;
+                height: 280px;
+            }
+
+            .titulo {
+                font-size: 31px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">Coffee House.</div>
+
+        <nav>
+            <a href="index-en.html">Home</a>
+            <a href="about-en.html">About Us</a>
+            <a href="menu-en.html">Menu</a>
+            <a href="contact-en.html">Contact</a>
+        </nav>
+
+        <!-- LANGUAGE SELECTOR -->
+
+        <div class="idiomas">
+
+            <a href="index.html" title="Português">
+                <img src="https://flagcdn.com/w40/br.png" alt="Brazil">
+            </a>
+
+            <a href="index-en.html" title="English">
+                <img src="https://flagcdn.com/w40/us.png" alt="United States">
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- HOME -->
+
+    <section class="inicio">
+
+        <div class="inicio-conteudo">
+
+            <h1>Your special moment starts with a coffee.</h1>
+
+            <p>
+                More than just a coffee shop, a place to relax,
+                enjoy great moments and discover new flavors.
+            </p>
+
+            <a href="menu-en.html" class="botao">
+                Explore Our Menu
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- DIFFERENTIALS -->
+
+    <section class="diferenciais">
+
+        <h2 class="titulo">
+            Why Choose Coffee House?
+        </h2>
+
+        <p class="subtitulo">
+            Every detail is designed to make your experience special.
+        </p>
+
+        <div class="diferenciais-container">
+
+            <div class="diferencial">
+
+                <div class="icone">☕</div>
+
+                <h3>Quality Coffee</h3>
+
+                <p>
+                    Carefully selected beans, prepared with attention
+                    to provide a unique experience.
+                </p>
+
+            </div>
+
+            <div class="diferencial">
+
+                <div class="icone">🥐</div>
+
+                <h3>Special Flavors</h3>
+
+                <p>
+                    A selection of drinks and treats
+                    prepared for every taste.
+                </p>
+
+            </div>
+
+            <div class="diferencial">
+
+                <div class="icone">🤎</div>
+
+                <h3>Cozy Atmosphere</h3>
+
+                <p>
+                    A comfortable place to meet friends,
+                    study or simply relax.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="sobre">
+
+        <img
+            src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=85"
+            alt="Cozy coffee shop interior"
+        >
+
+        <div class="sobre-conteudo">
+
+            <h2 class="titulo">
+                Much More Than a Coffee Shop.
+            </h2>
+
+            <p>
+                Coffee House was born from a passion for coffee
+                and the desire to create an environment where
+                everyone can enjoy special moments.
+            </p>
+
+            <a href="about-en.html" class="botao">
+                Our Story
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- MENU -->
+
+    <section class="cardapio">
+
+        <h2 class="titulo">
+            Our Highlights
+        </h2>
+
+        <p class="subtitulo">
+            Some of the delicious treats waiting for you.
+        </p>
+
+        <div class="produtos">
+
+            <div class="produto">
+
+                <img
+                    src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=85"
+                    alt="Espresso coffee"
+                >
+
+                <div class="produto-info">
+
+                    <h3>Espresso</h3>
+
+                    <p>
+                        Intense, full-bodied coffee prepared just right.
+                    </p>
+
+                    <span class="preco">R$ 8.00</span>
+
+                </div>
+
+            </div>
+
+            <div class="produto">
+
+                <img
+                    src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=800&q=85"
+                    alt="Creamy cappuccino"
+                >
+
+                <div class="produto-info">
+
+                    <h3>Cappuccino</h3>
+
+                    <p>
+                        A creamy combination of coffee, milk and foam.
+                    </p>
+
+                    <span class="preco">R$ 14.00</span>
+
+                </div>
+
+            </div>
+
+            <div class="produto">
+
+                <img
+                    src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=85"
+                    alt="Artisan croissant"
+                >
+
+                <div class="produto-info">
+
+                    <h3>Croissant</h3>
+
+                    <p>
+                        Light and crispy pastry, perfect with your coffee.
+                    </p>
+
+                    <span class="preco">R$ 12.00</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <a href="menu-en.html" class="botao">
+            View Full Menu
+        </a>
+
+    </section>
+
+    <!-- FINAL SECTION -->
+
+    <section class="chamada">
+
+        <h2 class="titulo">
+            Your Next Coffee Is Here.
+        </h2>
+
+        <p>
+            Come visit Coffee House and enjoy this special moment.
+        </p>
+
+        <a href="contact-en.html" class="botao">
+            Contact Us
+        </a>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Coffee House. All rights reserved.
+        </p>
+
+        <p>
+            Made with ☕ and dedication.
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Coffee House</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* GENERAL SETTINGS */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f1e8;
+            color: #211711;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* HEADER */
+
+        header {
+            background-color: #211711;
+            color: #f7f1e8;
+            padding: 22px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 27px;
+            font-weight: 700;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #c69b6d;
+        }
+
+        /* LANGUAGE SELECTOR */
+
+        .idiomas {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 7px 12px;
+            background-color: #302219;
+            border: 1px solid #57402e;
+            border-radius: 30px;
+        }
+
+        .idiomas a {
+            display: flex;
+            width: 34px;
+            height: 26px;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .idiomas img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .idiomas a:hover {
+            transform: scale(1.12);
+        }
+
+        /* PAGE TITLE */
+
+        .titulo-pagina {
+            background:
+                linear-gradient(
+                    rgba(20, 12, 8, 0.60),
+                    rgba(20, 12, 8, 0.60)
+                ),
+                url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85");
+
+            background-position: center;
+            background-size: cover;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 40px 8%;
+        }
+
+        .titulo-pagina h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .titulo-pagina p {
+            font-size: 17px;
+        }
+
+        /* ABOUT SECTION */
+
+        .sobre {
+            padding: 85px 10%;
+            display: flex;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .sobre img {
+            width: 50%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .sobre-conteudo {
+            flex: 1;
+        }
+
+        .sobre-conteudo h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .sobre-conteudo p {
+            color: #62564c;
+            line-height: 1.9;
+            margin-bottom: 18px;
+            font-size: 15px;
+        }
+
+        /* VALUES */
+
+        .valores {
+            background-color: #e9ddce;
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .valores h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .subtitulo {
+            color: #74685e;
+            margin-bottom: 45px;
+        }
+
+        .valores-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .valor {
+            background-color: #fffaf3;
+            padding: 35px 25px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .valor:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(33, 23, 17, 0.10);
+        }
+
+        .valor span {
+            font-size: 35px;
+        }
+
+        .valor h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin: 15px 0;
+        }
+
+        .valor p {
+            color: #74685e;
+            line-height: 1.7;
+        }
+
+        /* INVITATION */
+
+        .convite {
+            background-color: #eee3d5;
+            padding: 85px 10%;
+            text-align: center;
+        }
+
+        .etiqueta {
+            color: #a4774f;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .convite .titulo {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin: 18px 0;
+        }
+
+        .convite p {
+            color: #756b63;
+            margin: 20px 0 30px;
+            line-height: 1.8;
+        }
+
+        .botao {
+            display: inline-block;
+            background-color: #211711;
+            color: #f7f1e8;
+            padding: 15px 32px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #a4774f;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: #160f0b;
+            color: #cbb9a7;
+            text-align: center;
+            padding: 25px;
+            font-size: 13px;
+        }
+
+        footer p + p {
+            margin-top: 10px;
+        }
+
+        /* RESPONSIVENESS */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 18px;
+            }
+
+            .titulo-pagina h1 {
+                font-size: 40px;
+            }
+
+            .sobre {
+                flex-direction: column;
+                padding: 60px 8%;
+            }
+
+            .sobre img {
+                width: 100%;
+                height: 280px;
+            }
+
+            .sobre-conteudo h2,
+            .valores h2 {
+                font-size: 31px;
+            }
+
+            .valores-container {
+                grid-template-columns: 1fr;
+            }
+
+            .convite .titulo {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">Coffee House.</div>
+
+        <nav>
+            <a href="index-en.html">Home</a>
+            <a href="about-en.html">About Us</a>
+            <a href="menu-en.html">Menu</a>
+            <a href="contact-en.html">Contact</a>
+        </nav>
+
+        <div class="idiomas">
+
+            <a href="about.html" title="Português">
+                <img src="https://flagcdn.com/w40/br.png" alt="Brazil">
+            </a>
+
+            <a href="about-en.html" title="English">
+                <img src="https://flagcdn.com/w40/us.png" alt="United States">
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- PAGE TITLE -->
+
+    <section class="titulo-pagina">
+
+        <div>
+            <h1>About Us</h1>
+            <p>Discover the story behind Coffee House.</p>
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="sobre">
+
+        <img
+            src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=85"
+            alt="Cozy coffee shop interior"
+        >
+
+        <div class="sobre-conteudo">
+
+            <h2>Our Story</h2>
+
+            <p>
+                Coffee House was born from a passion for coffee
+                and the desire to create a special place where
+                people can enjoy meaningful moments.
+            </p>
+
+            <p>
+                We believe that coffee is more than just a drink.
+                It is an opportunity to connect, relax and create
+                unforgettable memories.
+            </p>
+
+            <p>
+                Every detail of our coffee shop is designed to
+                provide comfort, quality and a welcoming experience.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- VALUES -->
+
+    <section class="valores">
+
+        <h2>What Makes Us Special?</h2>
+
+        <p class="subtitulo">
+            Our values are part of everything we do.
+        </p>
+
+        <div class="valores-container">
+
+            <div class="valor">
+                <span>☕</span>
+                <h3>Quality</h3>
+                <p>
+                    We carefully select our ingredients
+                    to deliver great coffee and flavors.
+                </p>
+            </div>
+
+            <div class="valor">
+                <span>🤎</span>
+                <h3>Passion</h3>
+                <p>
+                    We love what we do and put dedication
+                    into every detail of our work.
+                </p>
+            </div>
+
+            <div class="valor">
+                <span>✨</span>
+                <h3>Experience</h3>
+                <p>
+                    We want every visit to be a special
+                    and memorable moment.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- INVITATION -->
+
+    <section class="convite">
+
+        <span class="etiqueta">Come Visit Us</span>
+
+        <h2 class="titulo">
+            Your next special moment starts here.
+        </h2>
+
+        <p>
+            Discover our flavors and explore our menu.
+        </p>
+
+        <a href="menu-en.html" class="botao">
+            Explore Our Menu
+        </a>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Coffee House. All rights reserved.
+        </p>
+
+        <p>
+            Made with ☕ and dedication.
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f1e8;
+    color: #211711;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: #211711;
+    color: #f7f1e8;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #f7f1e8;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.ativo {
+    color: #c69b6d;
+}
+
+/* BANNER DE CONTATO */
+
+.contato-banner {
+    background:
+    linear-gradient(rgba(33, 23, 17, 0.7), rgba(33, 23, 17, 0.7)),
+    url('https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=1600&q=85') center/cover;
+
+    color: white;
+    text-align: center;
+    padding: 110px 10%;
+}
+
+.contato-banner span {
+    color: #e1b98e;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.contato-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.contato-banner p {
+    line-height: 1.8;
+    max-width: 650px;
+    margin: auto;
+}
+
+/* CONTEÚDO DE CONTATO */
+
+.contato-container {
+    padding: 100px 10%;
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.contato-informacoes,
+.formulario {
+    flex: 1;
+}
+
+.etiqueta {
+    color: #a4774f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.contato-informacoes h2,
+.formulario h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin: 15px 0 20px;
+}
+
+.contato-informacoes > p {
+    color: #756b63;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.informacao {
+    margin: 28px 0;
+}
+
+.informacao h3 {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.informacao p {
+    color: #756b63;
+    font-size: 14px;
+}
+
+/* FORMULÁRIO */
+
+.formulario {
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 10px;
+    box-shadow: 0 10px 35px rgba(33, 23, 17, 0.08);
+}
+
+.formulario h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    margin: 17px 0 9px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* CAMPOS */
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd2c5;
+    border-radius: 5px;
+    background-color: #fdfbf8;
+    color: #211711;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+    color: #a49a90;
+}
+
+/* SELEÇÃO DE ASSUNTO */
+
+.formulario select {
+    cursor: pointer;
+    appearance: auto;
+}
+
+/* EFEITO AO CLICAR */
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    border-color: #a4774f;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(164, 119, 79, 0.12);
+}
+
+/* CAMPO DE MENSAGEM */
+
+.formulario textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+/* BOTÃO */
+
+.formulario button {
+    margin-top: 25px;
+    padding: 16px;
+    background: #211711;
+    color: #f7f1e8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+    background: #a4774f;
+    transform: translateY(-2px);
+}
+
+/* RESPOSTA DO FORMULÁRIO */
+
+#resposta {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* FRASE FINAL */
+
+.frase-contato {
+    background: #eee3d5;
+    text-align: center;
+    padding: 85px 15%;
+}
+
+.frase-contato h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+.frase-contato span {
+    display: block;
+    margin-top: 20px;
+    color: #a4774f;
+    font-weight: 600;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #211711;
+    color: #f7f1e8;
+    text-align: center;
+    padding: 40px 10%;
+}
+
+footer strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
+footer p {
+    margin-top: 12px;
+    color: #c9b9a8;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contato-container {
+        flex-direction: column;
+        padding: 60px 7%;
+        gap: 40px;
+    }
+
+    .contato-informacoes,
+    .formulario {
+        width: 100%;
+    }
+
+    .formulario {
+        padding: 25px;
+    }
+
+    .contato-banner {
+        padding: 80px 7%;
+    }
+
+    .contato-banner h1 {
+        font-size: 35px;
+    }
+
+    .frase-contato {
+        padding: 65px 8%;
+    }
+
+    .frase-contato h2 {
+        font-size: 24px;
+    }
+}
